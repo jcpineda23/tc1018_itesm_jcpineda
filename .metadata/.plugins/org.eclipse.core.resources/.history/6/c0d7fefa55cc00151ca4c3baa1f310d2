@@ -1,0 +1,10 @@
+package com.oracle.loganalytics.geoip;
+
+public class GeoIP {
+	
+	public GeoIP()
+	{
+	
+	}
+
+}
