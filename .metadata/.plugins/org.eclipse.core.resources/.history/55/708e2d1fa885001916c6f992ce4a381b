@@ -1,0 +1,10 @@
+package mx.itesm.ti1018.recursion;
+
+public class RecursionWorker {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

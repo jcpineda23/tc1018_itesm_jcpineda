@@ -1,0 +1,10 @@
+package mx.itesm.te1018.search;
+
+public class Seeker {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

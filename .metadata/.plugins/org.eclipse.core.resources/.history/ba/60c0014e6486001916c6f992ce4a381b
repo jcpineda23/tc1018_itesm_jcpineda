@@ -1,0 +1,39 @@
+package mx.itesm.ti1018.recursion;
+
+public class RecursionWorker {
+
+	
+	////POWER FUNCTION
+	public static int power(int base, int exp){
+		if(base == 1){
+			//base
+			return base;
+		}
+		else if(exp == 0){
+			//base
+			return 1;
+		}
+		else{
+			//recursive case
+			return base * power(base, exp -1);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/////TEST POWER
+//		System.out.println(power(10, 2));
+//		System.out.println(power(5, 4));
+//		System.out.println(power(2, 10));
+//		System.out.println(power(3, 4));
+//		System.out.println(power(0, 2));
+
+		
+
+	}
+	
+	
+
+}

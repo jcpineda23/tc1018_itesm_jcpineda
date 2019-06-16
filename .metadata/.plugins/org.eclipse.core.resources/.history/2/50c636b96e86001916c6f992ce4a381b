@@ -1,0 +1,86 @@
+package mx.itesm.ti1018.recursion;
+
+public class RecursionWorker {
+	
+	//Print n Stars 
+	public static void printStars(int n){
+		if(n == 0)
+			return;
+		if(n == 1)
+			System.out.print("*");
+		else{
+			System.out.print("*");
+			printStars(n - 1);
+		}
+	}
+	
+	
+	////Palindrome Function
+	public static boolean isPalindrome(String str){
+		String restOfStr = null;
+		str = str.toLowerCase().replaceAll("\\s","");
+		
+		//Basic cases
+		if (str.length() <= 1)
+			return true;
+		else if (str.length() > 1) {
+			if(str.substring(0,1).equals(str.substring(str.length() - 1, str.length()))){
+				restOfStr = str.substring(1, str.length()-1);				
+				return isPalindrome(restOfStr);
+			}
+			else
+				return false;
+		}
+		
+		return false;
+	}
+	
+	
+	
+	////POWER FUNCTION
+	//// NOTE: Handling recursion with returns
+	public static int power(int base, int exp){
+		if(base == 1){
+			//base
+			return base;
+		} else if(exp == 0){
+			//base
+			return 1;
+		}else{
+			//recursive case
+			return base * power(base, exp -1);
+		}		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/////TEST POWER
+//		System.out.println(power(10, 2));
+//		System.out.println(power(5, 4));
+//		System.out.println(power(2, 10));
+//		System.out.println(power(3, 4));
+//		System.out.println(power(0, 2));
+
+		/////Test Palindrome
+		System.out.println(isPalindrome("annia"));
+		System.out.println(isPalindrome("anita lava la tina"));
+//		System.out.println(isPalindrome("anna"));
+//		System.out.println(isPalindrome("anna"));
+//		System.out.println(isPalindrome("anna"));
+		
+		
+
+		/////Test printStar(n)
+		printStars(1);
+		printStars(12);
+		printStars(3);
+		printStars(6);
+		printStars(0);
+		
+
+	}
+	
+	
+
+}

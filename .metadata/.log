@@ -1322,3 +1322,27 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:168)
 	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:475)
 	... 6 more
+
+!ENTRY org.eclipse.egit.core 4 0 2019-06-15 20:14:23.251
+!MESSAGE An exception occurred during push on URI https://github.com/jcpineda23/tc1018_itesm_jcpineda.git: Nothing to push.
+!STACK 0
+org.eclipse.jgit.errors.TransportException: Nothing to push.
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1170)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:197)
+	at org.eclipse.egit.ui.internal.push.PushWizard$PushJob.run(PushWizard.java:298)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-06-15 20:14:23.253
+!MESSAGE Can't connect to any repository: https://github.com/jcpineda23/tc1018_itesm_jcpineda.git (Nothing to push.)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-06-15 20:15:05.306
+!MESSAGE An exception occurred during push on URI https://github.com/jcpineda23/tc1018_itesm_jcpineda.git: Nothing to push.
+!STACK 0
+org.eclipse.jgit.errors.TransportException: Nothing to push.
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1170)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:197)
+	at org.eclipse.egit.ui.internal.push.PushWizard$PushJob.run(PushWizard.java:298)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-06-15 20:15:05.306
+!MESSAGE Can't connect to any repository: https://github.com/jcpineda23/tc1018_itesm_jcpineda.git (Nothing to push.)
