@@ -51,6 +51,20 @@ public class RecursionWorker {
 		}		
 	}
 	
+	/// isBinary 
+	public static void printBinary(int n){
+		//base case
+		if(n < 2)
+			System.out.print(n);
+		else{
+			int lastDigit = n % 2;
+			int restOfDigits = n / 2;
+			printBinary(restOfDigits);
+			printBinary(lastDigit);
+		}
+				
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -71,15 +85,19 @@ public class RecursionWorker {
 		
 
 		/////Test printStar(n)
-		printStars(1);
-		System.out.println("");
-		printStars(12);
-		System.out.println("");
-		printStars(3);
-		System.out.println("");
-		printStars(6);
-		System.out.println("");
-		printStars(4);
+//		printStars(1);
+//		System.out.println("");
+//		printStars(12);
+//		System.out.println("");
+//		printStars(3);
+//		System.out.println("");
+//		printStars(6);
+//		System.out.println("");
+//		printStars(4);
+		
+		printBinary(10);
+		System.out.println();
+		printBinary(12);
 		
 
 	}
