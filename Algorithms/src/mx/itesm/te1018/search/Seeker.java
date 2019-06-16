@@ -19,6 +19,8 @@ public class Seeker {
 		int[] myArr = {4, 3, 5, 7, 1, 12, 16, 23};
 		linearSearch(myArr, 23);
 		linearSearch(myArr, 5);
+		
+		System.out.println();
 	}
 
 }
