@@ -17,17 +17,18 @@ public class BinarySearch {
 		
 		int middle = (int) Math.floor((end + start)/2);
 		
-		if(arr[middle] == x)
-			return middle;
+		if(arr[middle] == x) {
+			return middle;			
+		}
 		else {
 			if(arr[middle] > x) { //Going left
 				///MAGIC FUNCTION
-				binarySearch(arr, 0, middle, x);
+				return binarySearch(arr, 0, middle, x);
 			}
 			else if(arr[middle] < x) //Go right
 			{
 				///MAGIC FUNCTION
-				binarySearch(arr, middle +1, end, x);
+				return binarySearch(arr, middle +1, end, x);
 			}
 		}
 		return -1;
@@ -35,10 +36,10 @@ public class BinarySearch {
 	
 	public static void main (String[] args) {
 		
-		int[] myArray = {1, 2, 4, 6, 8,10, 12, 14};
+		int[] myArray = {1, 2, 4, 6, 8, 10, 12, 14, 16 , 17, 18, 33};
 		
 		System.out.println("Found at: " + 
-						binarySearch(myArray, 0, myArray.length, 4));
+						binarySearch(myArray, 0, myArray.length, 2));
 		
 	}
 	
