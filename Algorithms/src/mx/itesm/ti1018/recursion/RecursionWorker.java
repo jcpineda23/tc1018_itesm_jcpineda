@@ -2,17 +2,6 @@ package mx.itesm.ti1018.recursion;
 
 public class RecursionWorker {
 	
-	//Print n Stars 
-	public static void printStars(int n){
-		
-		if(n == 1)
-			System.out.print("*");
-		else{
-			System.out.print("*");
-			printStars(n - 1);
-		}
-	}
-	
 	
 	////Palindrome Function
 	public static boolean isPalindrome(String str){
@@ -51,6 +40,33 @@ public class RecursionWorker {
 		}		
 	}
 	
+	
+	
+	public static void printBinary_A(int n) {
+		
+		if(n < 0) {
+			System.out.println("-");
+			// This is crazy
+		}
+		else if(n < 2) {
+			System.out.print(n);
+		}
+		else {
+			int lastDigit = n % 2;
+			int restOfNumber = n/2;
+			printBinary_A(restOfNumber);
+			printBinary_A(lastDigit);
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	/// isBinary 
 	public static void printBinary(int n){
 		//base case
@@ -65,6 +81,32 @@ public class RecursionWorker {
 				
 	}
 	
+	
+	public static int factorial(int n) {
+		if(n == 0) {
+			return 1;
+		}
+		else {
+			// MAGIC 
+			
+			return n * factorial(n -1) ;
+		}
+	}
+	
+	public static void printStar(int n) {
+		if(n == 1) {
+			System.out.print("*");			
+		}
+		else {
+			/// Magic_function();
+			System.out.print("*");
+			printStar(n-1);
+		}
+	}
+	
+	
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -75,29 +117,26 @@ public class RecursionWorker {
 //		System.out.println(power(3, 4));
 //		System.out.println(power(0, 2));
 
-		/////Test Palindrome
-	//	System.out.println(isPalindrome("annia"));
-	//	System.out.println(isPalindrome("anita lava la tina"));
+		///Test Palindrome
+//		System.out.println(isPalindrome("annia"));
+//		System.out.println(isPalindrome("anita lava la tina"));
+//		System.out.println(isPalindrome("anna lala"));
 //		System.out.println(isPalindrome("anna"));
 //		System.out.println(isPalindrome("anna"));
-//		System.out.println(isPalindrome("anna"));
-		
+//		
 		
 
-		/////Test printStar(n)
-//		printStars(1);
-//		System.out.println("");
-//		printStars(12);
-//		System.out.println("");
-//		printStars(3);
-//		System.out.println("");
-//		printStars(6);
-//		System.out.println("");
-//		printStars(4);
+		/*
+		 * ///Test printStar(n) printStar(1); System.out.println(""); //printStar(12);
+		 * //System.out.println(""); printStar(3); System.out.println(""); printStar(6);
+		 * System.out.println(""); printStar(4);
+		 */
 		
-		printBinary(10);
+		printBinary_A(10);
 		System.out.println();
-		printBinary(12);
+		printBinary_A(-12);
+		
+		
 		
 
 	}
