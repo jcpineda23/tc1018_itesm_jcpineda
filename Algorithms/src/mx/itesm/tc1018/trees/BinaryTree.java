@@ -26,6 +26,57 @@ public class BinaryTree {
 		return root;
 	}
 	
+	public BinaryTreeNode removeNode(BinaryTreeNode root, int key) {
+		
+		if(root == null) {
+			return root;
+		}
+		
+		///Else go down the tree
+		
+		if(key > root.value) {
+			root.right = removeNode(root.right, key);
+		}
+		else if(key < root.value) {
+			root.left = removeNode(root.left, key);
+		}
+		
+		 // if key is same as root value, then THIS IS THE NODE 
+		 // WE ARE TRYING TO DELEVE
+        else
+        { 
+            // node with only one child or no child 
+            if (root.left == null) 
+                return root.right; 
+            else if (root.right == null) 
+                return root.left; 
+  
+            
+            root.value = minValue(root.right); 
+  
+            
+            root.right = removeNode(root.right, root.value); 
+        } 
+		
+		
+		
+		
+	    return root;	
+	}
 	
+	
+	public int minValue(BinaryTreeNode root) {
+		
+		while(root.left != null) {
+			root = root.left;
+		}
+		
+		return root.value;
+		
+	}
+	
+	
+	
+    
 
 }
