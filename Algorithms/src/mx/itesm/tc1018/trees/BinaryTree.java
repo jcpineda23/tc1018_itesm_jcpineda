@@ -64,6 +64,11 @@ public class BinaryTree {
 	    return root;	
 	}
 	
+	public void printInOrder(BinaryTreeNode root) {
+		
+	}
+	
+	
 	
 	public int minValue(BinaryTreeNode root) {
 		
